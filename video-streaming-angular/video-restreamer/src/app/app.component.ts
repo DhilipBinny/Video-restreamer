@@ -17,8 +17,8 @@ export class AppComponent {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '80%',
       data: { 
-        "nodejs":"http://localhost:8001/nodejs",
-        "python":"http://localhost:8000/python"
+        "nodejs":"http://134.209.105.222:8001/nodejs",
+        "python":"http://134.209.105.222:8000/python"
       }
     });
 
