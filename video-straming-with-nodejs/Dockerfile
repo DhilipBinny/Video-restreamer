@@ -3,7 +3,7 @@
    FROM node:10
 
    # Create and change to the app directory.
-   WORKDIR /usr/src/app
+   WORKDIR /app
 
    # Set this environmental variable to the integration you want to use
    ENV PORT=8001
