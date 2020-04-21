@@ -2,7 +2,7 @@ from flask import Flask, render_template, Response, request
 import urllib 
 from urllib.request import urlopen
 import json
-
+import os
 
 app = Flask(__name__)
 
@@ -60,7 +60,7 @@ def video_feed():
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return "hi, from python api for video streamer."
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=os.env.get("PORT",8000), debug=True)

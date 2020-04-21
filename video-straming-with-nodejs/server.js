@@ -4,6 +4,7 @@ const url = require('url');
 const request = require('request')
 
 let print = console.log
+const PORT = process.env.PORT || 8001
 
 const server = createServer((req, res) => {
 
@@ -36,6 +37,6 @@ const server = createServer((req, res) => {
     
 });
 
-server.listen(8001, () => {
+server.listen(PORT, () => {
     print("APP started in PORT 8001")
 });
