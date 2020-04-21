@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <title>Video streaming with Node.js</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <!-- <div class="text-center" style="background-color:#f5bbbb; padding:10px 0px; padding: 20px 5px;">
+          <a href="https://jsonworld.com"><h2>JSON WORLD</h2></a>
+          <a href="https://jsonworld.com" target="_blank"><span>Video streaming with Node.js</span></a>
+        </div>
+     
+    <div class="row">
+      <div>
+        <img src="http://localhost:3000/video">
+      </div>
+    </div> -->
+  <h1>hello world</h1>
+  <img id="image">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script>
+    const socket = io.connect('http://localhost:3000/');
+    socket.on('image', (data) => {
+      console.log("data", data)
+      const img  = document.getElementById("image");
+      img.src = `data:image/jpeg;base64,${image}`;
+    })
+  </script>
+</body>
+
+</html>

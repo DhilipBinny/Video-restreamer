@@ -1,0 +1,15 @@
+
+  <mat-toolbar class="mat-elevation-z8" style="vertical-align: middle;">
+    <img src="assets/logo.jpg" height="90%" routerLink="/home" />
+    <span> &nbsp;&nbsp; &nbsp;DHILIP'S VIDEO RE-STREAMER</span>
+    <span class="example-spacer"></span>
+    <button mat-button [routerLink]="['/nodejs']" >NodeJs Backend</button>
+    <button mat-button [routerLink]="['/python']">Python Backend</button>
+    <button mat-button [routerLink]="['/try_url']">Try New Url</button>
+    <button mat-button (click)="configurebackendurl()">Configure BackendUrl</button>
+  </mat-toolbar>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  

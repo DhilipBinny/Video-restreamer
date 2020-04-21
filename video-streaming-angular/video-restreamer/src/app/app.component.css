@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+button {
+    min-width: min-content;
+}
+
+.container{
+    margin: auto;
+    padding: 5px;
+}

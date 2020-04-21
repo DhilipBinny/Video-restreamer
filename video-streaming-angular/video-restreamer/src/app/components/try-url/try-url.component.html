@@ -1,0 +1,20 @@
+<div class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Live mpeg video input url</mat-label>
+        <input matInput placeholder="Enter video url.." [(ngModel)]="inputValue">
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="loadUrl(img)">Restream this Video</button>
+</div>
+
+<div style="text-align: center;">
+    <div>
+        <h2>{{video_src}}</h2>
+    </div>
+    <div style="background-color: black; padding: 1%;">
+        <img [src]="video_src" #img />
+    </div>
+</div>
+
+<!-- <video id="videoPlayer" controls>
+    <source src="http://localhost:8000/video?stream_url=http://36.53.199.53:8082/nphMotionJpeg?Resolution=640x480&Quality=Standard" type="video/mp4">
+  </video> -->

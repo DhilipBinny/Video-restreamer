@@ -1,0 +1,26 @@
+
+<div class="wrapper">
+    <div class="header">
+        <h1> Available public video streams</h1>
+    </div>
+    <div class="cards">
+        <div *ngFor="let card of cards | keyvalue" class="card" matRipple >
+            <div style="margin:auto;text-align: center;">
+                <b>{{card.key}}</b>
+                <BR>
+                <img src="{{backend_url}}/video?stream_url={{card.value}}" alt="img " style="width: 80%; " (click) = "openNewTab(card.value)">
+                <br>
+                <span>{{backend_url}}/video?stream_url={{card.value}}</span>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; width: 100%;">
+                <div>
+                    <button mat-stroked-button color="accent" *ngIf="card.value" (click)="openNewTab(card.value)">
+                        <mat-icon>play_circle_outline</mat-icon>
+                        <!-- <img  src="assets/icons/forward-button.png"  height="30px" /> -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
