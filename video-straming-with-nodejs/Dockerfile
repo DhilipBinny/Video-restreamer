@@ -3,7 +3,7 @@
    FROM node:10
 
    # Create and change to the app directory.
-   WORKDIR /app
+   WORKDIR /usr/src/app
 
    # Set this environmental variable to the integration you want to use
    ENV PORT=8001
@@ -19,4 +19,4 @@
    EXPOSE 8001
 
    # Run the web service on container startup.
-   CMD [ "node", "serve.js" ]
+   CMD [ "node", "server.js" ]
